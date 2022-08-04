@@ -25,11 +25,13 @@ class EmployeeController extends Controller
             <thead>
               <tr>
                 <th>ID</th>
+                <th>Department</th>
                 <th>Avatar</th>
                 <th>Name</th>
                 <th>E-mail</th>
-                <th>Post</th>
-                <th>Phone</th>
+                <th>Type</th>
+                <th>Brand</th>
+                <th>Acquired</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -37,11 +39,13 @@ class EmployeeController extends Controller
             foreach ($emps as $emp) {
                 $output .= '<tr>
                 <td>' . $emp->id . '</td>
+                <td>' . $emp->department . '</td>
                 <td><img src="storage/images/' . $emp->avatar . '" width="50" class="img-thumbnail rounded-circle"></td>
-                <td>' . $emp->first_name . ' ' . $emp->last_name . '</td>
+                <td>' . $emp->fullname . '</td>
                 <td>' . $emp->email . '</td>
-                <td>' . $emp->post . '</td>
-                <td>' . $emp->phone . '</td>
+                <td>' . $emp->category . '</td>
+                <td>' . $emp->make . '</td>
+                <td>' . $emp->date_acquired . '</td>
                 <td>
                   <a href="#" id="' . $emp->id . '" class="text-success mx-1 editIcon" data-bs-toggle="modal" data-bs-target="#editEmployeeModal"><i class="bi-pencil-square h4"></i></a>
 
@@ -63,7 +67,27 @@ class EmployeeController extends Controller
         $fileName = time() . '.' . $file->getClientOriginalExtension();
         $file->storeAs('public/images', $fileName);
 
-        $empData = ['first_name' => $request->fname, 'last_name' => $request->lname, 'email' => $request->email, 'phone' => $request->phone, 'post' => $request->post, 'avatar' => $fileName];
+        $empData = [
+        'fullname' => $request->fullname,
+        'department' => $request->department,
+        'position' => $request->position,
+        'email' => $request->email,
+        'make' => $request->make,
+        'model' => $request->model,
+        'serial' => $request->serial,
+        'category' => $request->category,
+        'date_acquired' => $request->date_acquired,
+        'os' => $request->os,
+        'processor' => $request->processor,
+        'proc_speed' => $request->proc_speed,
+        'ram_type' => $request->ram_type,
+        'ram_slots' => $request->ram_slots,
+        'ram_capacity' => $request->ram_capacity,
+        'ram_mhz' => $request->ram_mhz,
+        'drve_type' => $request->drve_type,
+        'drve_capacity' => $request->drve_capacity,
+        'remarks' => $request->remarks,
+        'avatar' => $fileName];
         Employee::create($empData);
         return response()->json([
             'status' => 200,
@@ -94,7 +118,27 @@ class EmployeeController extends Controller
             $fileName = $request->emp_avatar;
         }
 
-        $empData = ['first_name' => $request->fname, 'last_name' => $request->lname, 'email' => $request->email, 'phone' => $request->phone, 'post' => $request->post, 'avatar' => $fileName];
+        $empData = [
+            'fullname' => $request->fullname,
+            'department' => $request->department,
+            'position' => $request->position,
+            'email' => $request->email,
+            'make' => $request->make,
+            'model' => $request->model,
+            'serial' => $request->serial,
+            'category' => $request->category,
+            'date_acquired' => $request->date_acquired,
+            'os' => $request->os,
+            'processor' => $request->processor,
+            'proc_speed' => $request->proc_speed,
+            'ram_type' => $request->ram_type,
+            'ram_slots' => $request->ram_slots,
+            'ram_capacity' => $request->ram_capacity,
+            'ram_mhz' => $request->ram_mhz,
+            'drve_type' => $request->drve_type,
+            'drve_capacity' => $request->drve_capacity,
+            'remarks' => $request->remarks,
+            'avatar' => $fileName];
 
         $emp->update($empData);
         return response()->json([

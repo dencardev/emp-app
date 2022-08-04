@@ -9,11 +9,25 @@ class Employee extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'first_name',
-        'last_name',
+        'fullname', 
+        'department',
+        'position',
         'email',
-        'phone',
-        'post',
+        'make',
+        'model',
+        'serial',
+        'category',
+        'date_acquired',
+        'os',
+        'processor',
+        'proc_speed',
+        'ram_type',
+        'ram_slots',
+        'ram_capacity',
+        'ram_mhz',
+        'drve_type',
+        'drve_capacity',
+        'remarks',
         'avatar'
     ];
 }
