@@ -11,7 +11,6 @@
   <link rel='stylesheet'
     href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' />
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.10.25/datatables.min.css" />
-
 </head>
 {{-- add new employee modal start --}}
 <div class="modal fade" id="addEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -333,20 +332,21 @@
             <div id="flush-collapseThree2" class="accordion-collapse collapse" aria-labelledby="flush-headingThree2" data-bs-parent="#accordionFlushExample2">
               <div class="accordion-body">
               <div class="modal-body p-4 bg-light">
-              <label for="ram">Processor Details:</label>
                 <div class="row">
                     <div class="col-lg">
+                    <label for="processor">Processor</label>
                       <input type="text" name="processor" id="processor" class="form-control" placeholder="Processor">
                     </div>
                     <div class="col-lg">
+                      <label for="proc_speed">Speed(GHz)</label>
                       <input type="number" name="proc_speed" id="proc_speed" class="form-control" placeholder="Speed(GHz)">
                     </div>
                 </div>
                 <hr>
-                <label for="ram">RAM Details:</label>
                 <div class="row">
                   <div class="col-lg">
-                    <select class="form-select" name="ram_type" id="ram_slots" aria-label="Default select example">
+                    <label for="ram_type">RAM Type</label>
+                    <select class="form-select" name="ram_type" id="ram_type" aria-label="Default select example">
                         <option selected>Select Type</option>
                         <option value="DDR2">DDR2</option>
                         <option value="DDR3">DDR3</option>
@@ -355,21 +355,24 @@
                     </select>
                   </div>
                   <div class="col-lg">
+                    <label for="ram_slots">RAM Slots</label>
                     <input type="number" name="ram_slots" id="ram_slots" class="form-control" placeholder="Ram Slots">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg pt-2">
+                    <label for="ram_capacity">RAM Capacity(GB)</label>
                     <input type="number" name="ram_capacity" id="ram_capacity" class="form-control" placeholder="Ram Capacity(GB)">
                   </div>
                   <div class="col-lg pt-2">
+                    <label for="ram_mhz">RAM Speed(MHz)</label>
                     <input type="number" name="ram_mhz" id="ram_mhz" class="form-control" placeholder="Ram Speed(MHz)">
                   </div>
                 </div>
                 <hr>
-                <label for="drive">Hard Drive Details:</label>
                 <div class="row">
                   <div class="col-lg">
+                  <label for="drve_type">Drive Type</label>
                   <select class="form-select" name="drve_type" id="drve_type" aria-label="Default select example">
                       <option selected>Select Type</option>
                       <option value="HDD">HDD</option>
@@ -377,6 +380,7 @@
                   </select>
                   </div>
                   <div class="col-lg">
+                    <label for="drve_capacity">Drive Capacity(GB)</label>
                     <input type="number" name="drve_capacity" id="drve_capacity" class="form-control" placeholder="Drive Capacity(GB)">
                   </div>
                 </div> 
@@ -567,7 +571,7 @@
           success: function(response) {
             $("#show_all_employees").html(response);
             $("table").DataTable({
-              order: [0, 'desc']
+              order: [0, 'desc'],
             });
           }
         });
