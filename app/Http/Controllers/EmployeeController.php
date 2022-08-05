@@ -12,7 +12,7 @@ class EmployeeController extends Controller
     // set index page view
     public function index()
     {
-        return view('index');
+        return view('pages.index');
     }
 
     // handle fetch all eamployees ajax request
