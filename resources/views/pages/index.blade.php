@@ -30,7 +30,33 @@
                     </div>
                     <div class="col-lg">
                       <label for="department">Department</label>
-                      <input type="text" name="department" class="form-control" placeholder="Department" required>
+                      <select class="form-select" name="department" aria-label="Default select example">
+                        <option selected>Select Department</option>
+                        <option value="Office of the Regional Director (ORD)">Office of the Regional Director (ORD)</option>
+                        <option value="Office of the Assistant Regional Director (OARD)">Office of the Assistant Regional Director (OARD)</option>
+                        <option value="ICT Unit (ICTU)">ICT Unit (ICTU)</option>
+                        <option value="Legal Unit (LU)">Legal Unit (LU)</option>
+                        <option value="Public Affairs Unit (PAU)">Public Affairs Unit (PAU)</option>
+                        <option value="Administrative Division (AD)">Administrative Division (AD)</option>
+                        <option value="Assets Management Section (AMS)">Assets Management Section (AMS)</option>
+                        <option value="Cashier Section (CS)">Cashier Section (CS)</option>
+                        <option value="General Services Section (GSS)">General Services Section (GSS)</option>
+                        <option value="Personnel Section (PS)">Personnel Section (PS)</option>
+                        <option value="Records Section (RS)">Records Section (RS)</option>
+                        <option value="Curriculum and Learning Management Division (CLMD)">Curriculum and Learning Management Division (CLMD)</option>
+                        <option value="Education Support Services Division (ESSD)">Education Support Services Division (ESSD)</option>
+                        <option value="Health and Nutrition Unit (HNU)">Health and Nutrition Unit (HNU)</option>
+                        <option value="Education Facilities Unit (EFU)">Education Facilities Unit (EFU)</option>
+                        <option value="Special Programs and Projects Unit (SPPU)">Special Programs and Projects Unit (SPPU)</option>
+                        <option value="Field Technical Assistance Division (FTAD)">Field Technical Assistance Division (FTAD)</option>
+                        <option value="Finance Division (FD)">Finance Division (FD)</option>
+                        <option value="Budget Section (BS)">Budget Section (BS)</option>
+                        <option value="Accounting Section (AS)">Accounting Section (AS)</option>
+                        <option value="Human Resource Development Division (HRDD)">Human Resource Development Division (HRDD)</option>
+                        <option value="(HRDD) - NEAP">(HRDD) - NEAP</option>
+                        <option value="Policy, Planning, and Research Division (PPRD)">Policy, Planning, and Research Division (PPRD)</option>
+                        <option value="Quality Assurance Division (QAD)">Quality Assurance Division (QAD)</option>
+                      </select>
                     </div>
                   </div>
                   <div class="my-2">
@@ -129,7 +155,7 @@
                       <input type="text" name="processor" class="form-control" placeholder="Processor">
                     </div>
                     <div class="col-lg">
-                      <input type="number" name="proc_speed" class="form-control" placeholder="Speed(GHz)">
+                      <input type="number" step=".01" name="proc_speed" class="form-control" placeholder="Speed(GHz)">
                     </div>
                 </div>
                 <hr>
@@ -153,7 +179,7 @@
                     <input type="number" name="ram_capacity" class="form-control" placeholder="Ram Capacity(GB)">
                   </div>
                   <div class="col-lg pt-2">
-                    <input type="number" name="ram_mhz" class="form-control" placeholder="Ram Speed(MHz)">
+                    <input type="number" step=".01" name="ram_mhz" class="form-control" placeholder="Ram Speed(MHz)">
                   </div>
                 </div>
                 <hr>
@@ -225,7 +251,33 @@
                     </div>
                     <div class="col-lg">
                       <label for="department">Department</label>
-                      <input type="text" name="department" id="department" class="form-control" placeholder="Department" required>
+                      <select class="form-select" name="department" id="department" aria-label="Default select example">
+                        <option selected>Select Department</option>
+                        <option value="Office of the Regional Director (ORD)">Office of the Regional Director (ORD)</option>
+                        <option value="Office of the Assistant Regional Director (OARD)">Office of the Assistant Regional Director (OARD)</option>
+                        <option value="ICT Unit (ICTU)">ICT Unit (ICTU)</option>
+                        <option value="Legal Unit (LU)">Legal Unit (LU)</option>
+                        <option value="Public Affairs Unit (PAU)">Public Affairs Unit (PAU)</option>
+                        <option value="Administrative Division (AD)">Administrative Division (AD)</option>
+                        <option value="Assets Management Section (AMS)">Assets Management Section (AMS)</option>
+                        <option value="Cashier Section (CS)">Cashier Section (CS)</option>
+                        <option value="General Services Section (GSS)">General Services Section (GSS)</option>
+                        <option value="Personnel Section (PS)">Personnel Section (PS)</option>
+                        <option value="Records Section (RS)">Records Section (RS)</option>
+                        <option value="Curriculum and Learning Management Division (CLMD)">Curriculum and Learning Management Division (CLMD)</option>
+                        <option value="Education Support Services Division (ESSD)">Education Support Services Division (ESSD)</option>
+                        <option value="Health and Nutrition Unit (HNU)">Health and Nutrition Unit (HNU)</option>
+                        <option value="Education Facilities Unit (EFU)">Education Facilities Unit (EFU)</option>
+                        <option value="Special Programs and Projects Unit (SPPU)">Special Programs and Projects Unit (SPPU)</option>
+                        <option value="Field Technical Assistance Division (FTAD)">Field Technical Assistance Division (FTAD)</option>
+                        <option value="Finance Division (FD)">Finance Division (FD)</option>
+                        <option value="Budget Section (BS)">Budget Section (BS)</option>
+                        <option value="Accounting Section (AS)">Accounting Section (AS)</option>
+                        <option value="Human Resource Development Division (HRDD)">Human Resource Development Division (HRDD)</option>
+                        <option value="(HRDD) - NEAP">(HRDD) - NEAP</option>
+                        <option value="Policy, Planning, and Research Division (PPRD)">Policy, Planning, and Research Division (PPRD)</option>
+                        <option value="Quality Assurance Division (QAD)">Quality Assurance Division (QAD)</option>
+                      </select>
                     </div>
                   </div>
                   <div class="my-2">
@@ -328,7 +380,7 @@
                     </div>
                     <div class="col-lg">
                       <label for="proc_speed">Speed(GHz)</label>
-                      <input type="number" name="proc_speed" id="proc_speed" class="form-control" placeholder="Speed(GHz)">
+                      <input type="number" step=".01" name="proc_speed" id="proc_speed" class="form-control" placeholder="Speed(GHz)">
                     </div>
                 </div>
                 <hr>
@@ -355,7 +407,7 @@
                   </div>
                   <div class="col-lg pt-2">
                     <label for="ram_mhz">RAM Speed(MHz)</label>
-                    <input type="number" name="ram_mhz" id="ram_mhz" class="form-control" placeholder="Ram Speed(MHz)">
+                    <input type="number" step=".01" name="ram_mhz" id="ram_mhz" class="form-control" placeholder="Ram Speed(MHz)">
                   </div>
                 </div>
                 <hr>

@@ -47,6 +47,8 @@ class EmployeeController extends Controller
                 <td>' . $emp->make . '</td>
                 <td>' . $emp->date_acquired . '</td>
                 <td>
+                  <a href="/profile" id="' . $emp->id . '" class="text-warning mx-1 viewIcon"><i class="bi-eye h4"></i></a>
+
                   <a href="#" id="' . $emp->id . '" class="text-success mx-1 editIcon" data-bs-toggle="modal" data-bs-target="#editEmployeeModal"><i class="bi-pencil-square h4"></i></a>
 
                   <a href="#" id="' . $emp->id . '" class="text-danger mx-1 deleteIcon"><i class="bi-trash h4"></i></a>
@@ -154,5 +156,10 @@ class EmployeeController extends Controller
         if (Storage::delete('public/images/' . $emp->avatar)) {
             Employee::destroy($id);
         }
+    }
+
+    public function profile()
+    {
+        return view('pages.profile');
     }
 }

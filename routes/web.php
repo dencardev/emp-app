@@ -20,3 +20,5 @@ Route::get('/fetch-all', [EmployeeController::class, 'fetchAll'])->name('fetchAl
 Route::delete('/delete', [EmployeeController::class, 'delete'])->name('delete');
 Route::get('/edit', [EmployeeController::class, 'edit'])->name('edit');
 Route::post('/update', [EmployeeController::class, 'update'])->name('update');
+
+Route::get('/profile', [EmployeeController::class, 'profile'])->name('profile');;
